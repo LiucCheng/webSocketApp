@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+</head>
+<body>
+<!-- Target -->
+<input id="me" placeholder="本人">
+<input id="you" placeholder="非本人">
+<input id="message" placeholder="消息">
+<button id="btn">发送</button>
+<button id="end">断开链接</button>
+<div id="msg"></div>
+<script type="text/javascript">
+    window.onload = function () {
+//        var me =  document.getElementById("me").value;
+//        var you =  document.getElementById("you").value;
+        var socket = new WebSocket("ws://localhost:8886");
+
+        /**
+         * 0        CONNECTING        连接尚未建立
+         * 1        OPEN            WebSocket的链接已经建立
+         * 2        CLOSING            连接正在关闭
+         * 3        CLOSED            连接已经关闭或不可用
+         * */
+        socket.data = {
+            user : "lc",
+            token : "123456"
+        }
+        //事件监听
+        socket.onopen = function() {}
+        socket.onmessage = function(msg) {
+            var data = JSON.parse(msg.data);
+            console.log( "message" , data);
+            document.getElementById("msg").innerHTML = data.user + data.msg + data.toUser;
+        }
+
+        document.getElementById("btn").onclick = function () {
+            var text = document.getElementById("message").value;
+            var sent = {
+                user : 'lc',
+                msg : text,
+                toUser : 'GG'
+            }
+            socket.send(JSON.stringify(sent));
+        }
+        console.log(socket)
+    }
+
+</script>
+
+</body>
+</html>

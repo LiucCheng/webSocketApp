@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" style="font-size: 100px;">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>来，我们聊聊天</title>
+    <link href="/css/base.css?v0.0.2" rel="stylesheet" />
+    <link href="/css/home.css?v0.0.2" rel="stylesheet" />
+</head>
+<body>
+
+<section id="section_1">
+    <header class="home_header">热聊<a id="add_btn" class="add_btn"></a></header>
+    <div class="home_context">
+        <ul class="hot_contact"></ul>
+        <ul class="contacts_list"></ul>
+        <ul class="find_view"></ul>
+        <ul class="me_detail">
+            <li>
+                当前用户名为：<span id="currentUserName"></span><span id="currentPwd"></span><button id="sign_out">退出登录</button>
+            </li>
+        </ul>
+    </div>
+    <footer class="home_footer">
+        <a class="footer_btn active"><i class="one"></i><span class="one">热聊</span></a>
+        <a class="footer_btn"><i class="two"></i><span class="ctip">0</span><span class="two">通讯录</span></a>
+        <a class="footer_btn"><i class="third"></i><span class="third">发现</span></a>
+        <a class="footer_btn"><i class="two"></i><span class="two">我</span></a>
+    </footer>
+</section>
+
+
+
+<script src="/js/common.js?v0.0.2"></script>
+<script src="/js/jquery.js"></script>
+<script src="/js/home.js?v0.0.2"></script>
+<script src="/lib/socket.io/socket.io.js"></script>
+</body>
+</html>

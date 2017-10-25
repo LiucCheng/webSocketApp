@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" style="font-size: 100px;">
+<head>
+    <meta charset="UTF-8">
+    <title>聊天中</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link href="/css/base.css?v0.0.2" rel="stylesheet" />
+    <link href="/css/index.css?v0.0.2" rel="stylesheet" />
+</head>
+<body>
+<section id="contact">
+    <header class="nav_header"><span class="back">返回</span><span class="contact_people">...</span></header>
+    <div id="text_show1" class="text_show">
+        <ul></ul>
+    </div>
+    <div class="footer">
+        <!--<div><span>发送给：</span><input id="recevied" placeholder="收信人"/></div>-->
+        <input id="send_text1"/>
+        <button id="send1">发送</button>
+    </div>
+</section>
+
+<script src="/js/common.js?v0.0.2"></script>
+<script src="/js/jquery.js"></script>
+<script src="/js/index.js?v0.0.2"></script>
+<script src="/lib/socket.io/socket.io.js"></script>
+</html>

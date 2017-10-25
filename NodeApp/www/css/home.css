@@ -1,0 +1,578 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-size: .16rem;
+}
+header.home_header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: .44rem;
+    line-height: .44rem;
+    text-align: center;
+    background: #25292c;
+    color: #fff;
+}
+header .add_btn{
+    position: absolute;
+    right: .15rem;
+    top: .12rem;
+    background: url(../img/i_16.png) no-repeat;
+    background-size: 100%;
+    width: .2rem;
+    height: .2rem;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+}
+#userPwd{
+    ime-mode:disabled;
+}
+.home_context{
+    position: absolute;
+    top: .44rem;
+    left: 0;
+    bottom: .44rem;
+    width: 100%;
+    background: #f5f5f5;
+}
+.home_context ul{
+    background: #f5f5f5;
+    padding-bottom: .45rem;
+}
+.home_context ul li{
+    background: #fff;
+    box-sizing: border-box;
+    padding: .1rem;
+    margin-bottom: .02rem;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    position: relative;
+}
+.home_context ul li span.mark_user{
+    font-size: .12rem;
+    color: #9eea6a;
+    height: 100%;
+    float: right;
+    margin-right: .12rem;
+}
+.home_context ul.me_detail{
+    display: none;
+}
+.home_context span.tip_num {
+    float: right;
+    font-size: .1rem;
+    height: .15rem;
+    width: .15rem;
+    background: red;
+    text-align: center;
+    border-radius: 50%;
+    color: #fff;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    margin-top: .03rem;
+    display: none;
+}
+#sign_out{
+    float: right;
+    margin-right: .1rem;
+}
+.home_footer{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: .44rem;
+    background: #fff;
+}
+.footer_btn{
+    display: inline-block;
+    height: 100%;
+    line-height: .44rem;
+    float: left;
+    width: 25%;
+    text-align: center;
+    box-sizing: border-box;
+    color: #999;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    position: relative;
+}
+/*.footer_btn:not(:last-child){*/
+    /*border-right: 1px solid #eee;*/
+/*}*/
+.footer_btn i.two {
+    background: url(../img/i_3.png) no-repeat center;
+    background-position: 50% 0%;
+    background-size: .15rem;
+}
+.footer_btn i.third {
+    background: url(../img/i_21.png) no-repeat top center;
+    background-size: .25rem;
+}
+
+.footer_btn i {
+    float: right;
+    height: .25rem;
+    width: 100%;
+    margin-top: .05rem;
+}
+.footer_btn span.ctip{
+    position: absolute;
+    top: 0;
+    right: .3rem;
+    height: .15rem;
+    width: .15rem;
+    border-radius: 50%;
+    background: red;
+    display: none;
+    color: #fff;
+    line-height: .15rem;
+}
+.footer_btn span{
+    font-size: .1rem;
+    float: right;
+    width: 100%;
+    line-height: .1rem;
+}
+.footer_btn i.one {
+    background: url(../img/i_19.png) no-repeat center;
+    background-size: .25rem;
+}
+.active i.third {
+    background: url(../img/i_22.png) no-repeat top center;
+    background-size: .25rem;
+}
+.active{
+    color: #06c1ae;
+}
+.active i.two{
+    background: url(../img/i_3.png) no-repeat center;
+    background-position: 50% 140%;
+    background-size: .15rem;
+}
+.active i.one{
+    background: url(../img/i_20.png) no-repeat center;
+    background-size: .25rem;
+    color: #19c471;
+}
+
+.loginView{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #f5f5f5;
+    text-align: center;
+}
+.loginView header{
+    line-height: .44rem;
+    border-bottom: .02rem solid #eee;
+}
+.loginView .loginBox{
+    display: inline-block;
+    width: 100%;
+    background: #f5f5f5;
+    border-radius: .05rem;
+    text-align: left;
+    padding: .1rem;
+    box-sizing: border-box;
+}
+.loginView .loginBox .info{
+    overflow: hidden;
+    margin-top: .1rem;
+    height: .35rem;
+    line-height: .35rem;
+    padding: .1rem 0;
+    border-bottom: .02rem solid #eee;
+}
+.loginView .loginBox .info:not(:first-child){
+    margin-top: .2rem;
+}
+
+.loginView .loginBox .info span{
+    float: left;
+    width: 20%;
+}
+.loginView .loginBox .info input{
+    float: right;
+    width: 80%;
+    box-sizing: border-box;
+    height: 100%;
+}
+.loginView .login_footer{
+    margin-top: .2rem;
+    line-height: .44rem;
+    border-radius: .05rem;
+    overflow: hidden;
+}
+.loginView .login_footer a{
+    float: left;
+    margin-top: .1rem;
+    border: .01rem solid #eee;
+    border-radius: .03rem;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    color: #fff;
+}
+.loginView .login_footer a:first-child{
+    background: lightgreen;
+}
+.loginView .login_footer a:last-child{
+    background: lightgray;
+}
+.loginView .remarkUserPwd{
+    line-height: .25rem;
+    margin-top: .1rem;
+    text-align: right;
+    font-size: .1rem;
+}
+.loginView .remarkUserPwd ul{
+    float: right;
+    height: .25rem;
+    width: .5rem;
+    border-radius: .15rem;
+    margin-left: .2rem;
+    position: relative;
+}
+/*.loginView .remarkUserPwd ul.save{*/
+    /*background: lightgreen;*/
+/*}*/
+/*.loginView .remarkUserPwd ul.nosave{*/
+    /*background: red;*/
+/*}*/
+
+.loginView .remarkUserPwd ul li{
+    position: absolute;
+    right: -.01rem;
+    height: 100%;
+    width: 70%;
+    background: #fff;
+    border-radius: .2rem;
+}
+.loginView .remarkUserPwd ul .right{
+    float: right;
+    height: 98%;
+    width: 50%;
+    background: red;
+    border-top-right-radius: .15rem;
+    border-bottom-right-radius: .15rem;
+    border-top-left-radius: .05rem;
+    border-bottom-left-radius: .05rem;
+}
+.loginView .remarkUserPwd ul .left{
+    float: left;
+    height: 98%;
+    width: 50%;
+    background: lightgreen;
+    border-top-left-radius: .15rem;
+    border-bottom-left-radius: .15rem;
+    border-top-right-radius: .05rem;
+    border-bottom-right-radius: .05rem;
+}
+
+/*注册页面*/
+.register{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #f4f4f4;
+    text-align: center;
+}
+.register header{
+    line-height: .44rem;
+    border-bottom: .02rem solid #eee;
+}
+.register header a{
+    position: absolute;
+    left: .1rem;
+    color: #333;
+}
+.register .loginBox{
+    display: inline-block;
+    width: 100%;
+    background: #f5f5f5;
+    border-radius: .05rem;
+    text-align: left;
+    padding: .1rem;
+    box-sizing: border-box;
+}
+.register .loginBox .info{
+    overflow: hidden;
+    margin-top: .1rem;
+    height: .35rem;
+    line-height: .35rem;
+    padding: .1rem 0;
+    border-bottom: .02rem solid #eee;
+}
+.register .loginBox .info:not(:first-child){
+    margin-top: .2rem;
+}
+
+.register .loginBox .info span{
+    float: left;
+    width: 20%;
+}
+.register .loginBox .info input{
+    float: right;
+    width: 80%;
+    box-sizing: border-box;
+    height: 100%;
+}
+.register .register_footer{
+    margin-top: .2rem;
+    line-height: .44rem;
+    border-radius: .05rem;
+}
+.register .register_footer a{
+    float: left;
+    margin-top: .1rem;
+    background: lightgreen;
+    border: .01rem solid #eee;
+    border-radius: .03rem;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    color: #fff;
+}
+
+
+.contacts_list .newFriend{
+    float: right;
+    margin-right: .3rem;
+    font-size: .1rem;
+    color: #ee0b0b;
+    margin-top: .03rem;
+}
+.contacts_list .currentUserShow{
+    float: right;
+    margin-right: .3rem;
+    font-size: .1rem;
+    color: #9eea6a;
+    margin-top: .03rem;
+}
+
+#currentPwd{
+    display: none;
+}
+
+.online{
+    color: lightgreen;
+    font-size: .1rem;
+    float: right;
+    margin-right: .12rem;
+    line-height: .2rem;
+}
+.offine{
+    color: red;
+    font-size: .1rem;
+    float: right;
+    margin-right: .12rem;
+    line-height: .2rem;
+}
+
+
+
+
+
+.popSearchView{
+    position: fixed;
+    top: .44rem;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: #f5f5f5;
+    z-index: 999;
+}
+.popSearchView header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: .44rem;
+    line-height: .44rem;
+    text-align: center;
+    background: #393a3c;
+    color: #fff;
+    z-index: 999;
+}
+.popSearchView header input{
+    border: none;
+    position: absolute;
+    left: .8rem;
+    top: .06rem;
+    width: 65%;
+    border-bottom: .02rem solid #09bb07;
+    font-size: .14rem;
+    height: 65%;
+    padding-left: .2rem;
+    background: url(../img/i_17.png) no-repeat left center;
+    background-size: .16rem;
+    color: #999;
+}
+/*input[type="search"]{-webkit-appearance:none;}*/
+/*.popSearchView header input::-webkit-search-cancel-button {*/
+/*}*/
+.popSearchView header span.back{
+    float: left;
+    padding-left: .14rem;
+    background: url(../img/i_1.png) no-repeat left center;
+    background-size: .1rem;
+    margin-left: .2rem;
+    cursor: pointer;
+}
+.popSearchView header #searchBtn{
+    display: inline-block;
+    position: absolute;
+    right: .12rem;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+}
+.popSearchView ul{
+    background: #f5f5f5;
+}
+
+.popSearchView ul li:not(.noData){
+    box-sizing: border-box;
+    padding: .1rem;
+    border-bottom: 1px solid #bbb;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.popSearchView ul li .addFriend{
+    float: right;
+    border-radius: .05rem;
+    font-size: .1rem;
+    background: #09bb07;
+    padding: .03rem .05rem;
+    color: #f5f5f5;
+}
+.popSearchView ul li .alreadFriend{
+    float: right;
+    border-radius: .05rem;
+    font-size: .1rem;
+    background: #aaa;
+    padding: .03rem .05rem;
+    color: #f5f5f5;
+}
+.popSearchView ul li.noData{
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    text-align: center;
+    color: #999;
+    line-height: 5rem;
+}
+
+
+
+.detailView{
+    position: fixed;
+    top: .44rem;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: #f5f5f5;
+    z-index: 999;
+}
+.detailView header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: .44rem;
+    line-height: .44rem;
+    text-align: center;
+    background: #25292c;
+    color: #fff;
+    z-index: 999;
+}
+.detailView header span.back{
+    float: left;
+    padding-left: .14rem;
+    background: url(../img/i_1.png) no-repeat left center;
+    background-size: .1rem;
+    margin-left: .2rem;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+}
+.detailView ul{
+    background: #f5f5f5;
+    text-align: center;
+}
+.detailView ul li{
+    box-sizing: border-box;
+    padding: .1rem;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    margin: .22rem 0;
+    background: #fff;
+}
+
+.detailView .title{
+    float: left;
+    margin-left: .2rem;
+}
+.detailView ul li strong,.detailView ul li span{
+    font-size: .14rem;
+}
+.detailView ul li:not(:first-child){
+    text-align: left;
+}
+
+.detailView ul .sendMessage{
+    height: .5rem;
+    width: 90%;
+    border-radius: .05rem;
+    background: #19ad17;
+    line-height: .5rem;
+    display: inline-block;
+    color: #fff;
+}
+.guide{
+    position: fixed;
+    right: 0;
+    top: .44rem;
+    bottom: .44rem;
+    width: .2rem;
+}
+.guide a{
+    text-decoration: none;
+    color: #999;
+    font-size: .14rem;
+    width: .2rem;
+    float: left;
+}
+
+/*长按的弹框*/
+.chooseView{
+    position: absolute;
+    right: 10%;
+    background: #aaa !important;
+    outline: 1px solid #eee;
+    border-radius: .05rem;
+    overflow: hidden;
+    z-index: 999;
+    padding-bottom: 0 !important;
+}
+.chooseView li{
+    line-height: .3rem;
+    padding: 0.05rem .1rem !important;
+    width: 100%;
+    -webkit-tap-highlight-color: transparent;
+}
+.bgView{
+    position: fixed;
+    top: 0;
+    left:0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+}
